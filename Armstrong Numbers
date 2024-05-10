@@ -1,0 +1,25 @@
+For a given 3 digit number, find whether it is armstrong number or not. 
+An Armstrong number of three digits is a number such that the sum of the cubes of its digits is equal to the number itself. 
+Return "Yes" if it is a armstrong number else return "No".
+NOTE: 371 is an Armstrong number since 33 + 73 + 13 = 371
+solution : 
+=> first we need to find each digits and add digit^3 to the sum
+=> at last check if that sum is equal to the original number
+class Solution {
+  public:
+    string armstrongNumber(int n){
+        // code here
+        int orig=n;
+        int sum=0;
+      // code for finding each digits and then cubing the digit and adding to sum
+        while(n>0)
+        {
+            int d=n%10;
+            sum=sum+d*d*d;
+            n=n/10;
+        }
+      // checking if that is equal to original number
+        if(orig==sum) return "Yes";
+        else return "No";
+    }
+};
