@@ -1,0 +1,10 @@
+Given two numbers A and B. Your task is to return the sum of A and B.
+solution : 
+=> Directly we can return the answer by addition operation
+class Solution{   
+public:
+    int addition(int A, int B){
+        // code here 
+        return (A+B);
+    }
+};
