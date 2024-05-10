@@ -1,0 +1,17 @@
+Given two positive integers a and b, find GCD of a and b.
+
+Note: Don't use the inbuilt gcd function
+
+solution : 
+=>If B is 0, it means A is the greatest common divisor. So, return A.
+=>If B is not 0, call the gcd function recursively with B as the new A and A % B as the new B.
+=>This step effectively replaces A with B and B with the remainder when dividing A by B.
+=>The recursive calls continue until B becomes 0, at which point the function returns A, which is the greatest common divisor.
+class Solution {
+  public:
+    int gcd(int a, int b) {
+        // code here
+       if(a==0) return b;
+       return(gcd(b%a,a));
+    }
+};
