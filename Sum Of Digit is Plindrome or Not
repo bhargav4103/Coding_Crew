@@ -1,0 +1,39 @@
+Given a number n.Find if the digit sum(or sum of digits) of n is a Palindrome number or not.
+
+Note: A Palindrome number is a number that stays the same when reversed. Example- 121 , 131 , 7 etc.
+
+solution: 
+=>Initialize sum to 0.
+=>Use a while loop to iterate until n becomes 0.
+=>In each iteration, add the last digit of n to sum and remove the last digit from n.
+=>Initialize reversedSum to 0.
+=>Assign the value of sum to n.
+=>Use another while loop to reverse the digits of n.
+=>In each iteration, multiply reversedSum by 10 and add the last digit of n to it, then remove the last digit from n.
+=>Check if reversedSum is equal to sum.
+=>If they are equal, return 1 (indicating that the digit sum is a palindrome), otherwise return 0.
+class Solution {
+  public:
+    int isDigitSumPalindrome(int n) {
+        // code here
+        
+        int sum=0;
+        while(n>0)
+        {
+            int d=n%10;
+            sum+=d;
+            n=n/10;
+        }
+        int rev=0;
+        int orig=sum;
+        while(sum>0)
+        {
+            int dig=sum%10;
+            rev=rev*10+dig;
+            sum=sum/10;
+        }
+        if(orig==rev) return 1;
+        else return 0;
+       
+    }
+};
