@@ -1,0 +1,12 @@
+Write a program to find the sum of the given series 1+2+3+ . . . . . .(N terms)
+solution : 
+class Solution {
+  public:
+    long long seriesSum(int n) {
+        // code here
+        //There is a mathematical formula for calculating the sum of n numbers
+        // since the input data is of type int its evaluation also rounds off to int 
+        // so to overcome that we typecasted to long long before evaluating
+        return (((long long)n)*(n+1))/2;
+    }
+};
