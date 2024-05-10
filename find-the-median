@@ -1,0 +1,18 @@
+Given an array arr[] of N integers, calculate the median.
+NOTE: Return the floor value of the median.
+sol : 
+=>We need to sort the elements in Ascending Order and then find the middle elements
+class Solution
+{
+public:
+		int find_median(vector<int> v)
+		{
+		    // Code here.
+      //sorting the elements in ascending order
+		    sort(v.begin(),v.end());
+		    int n=v.size();
+      //middle elements will be at index n/2 only if n is odd and n/2,n/2-1 if n is even.
+		    if(n%2==0) return (double(v[(n-1)/2]+v[n/2])/2.0);
+		    else return(double(v[n/2]));
+		}
+};
