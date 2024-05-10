@@ -1,0 +1,13 @@
+Given a positive integer N, determine whether it is odd or even.
+solution : 
+=> % is used to find the reminder when numerator is divided by denominator.
+=> A number gives a remainder of 1 if it is divided by 2 when it is odd and 0 when it is even
+=> N%2==0 then even else odd.
+class Solution{   
+public:
+    string oddEven(int N){
+        // code here 
+        if(N%2!=0) return "odd";
+        else return "even";
+    }
+};
