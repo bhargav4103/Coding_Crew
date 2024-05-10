@@ -1,0 +1,9 @@
+Given 3 numbers A, B and C. Find the greatest number among them.
+solution:
+class Solution {
+  public:
+    // Function to find greatest of three numbers
+    int greatestOfThree(int A, int B, int C) {
+        return max(A, max(B, C));
+    }
+};
