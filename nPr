@@ -1,0 +1,21 @@
+Write a program to calculate nPr. nPr represents n permutation r and value of nPr is (n!) / (n-r)!.
+solution : 
+=>factorial of n can be calculated by multiplying all the numbers from 1 to n
+class Solution{
+public:
+        // code here
+        long long fact(int n)
+        {
+            long long res=1;
+            while(n)
+            {
+                res=res*n;
+                n--;
+            }
+            return res;
+        }
+        long long nPr(int n, int r)
+        {
+            return (fact(n)/fact(n-r));
+        }
+};
